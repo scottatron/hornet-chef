@@ -43,8 +43,8 @@ ssh_known_hosts "github.com" do
 end
 
 # Add to admin group for passwordless sudo
-group "admin" do
-  # action :modify
+group "sudo" do
+  action :modify
   members "captain"
   append true
 end

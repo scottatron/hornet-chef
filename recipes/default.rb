@@ -9,4 +9,6 @@
 
 include_recipe "apt"
 include_recipe "git"
-include_recipe "hornet::captain"
+
+package "libsqlite3-dev"
+package "imagemagick"
