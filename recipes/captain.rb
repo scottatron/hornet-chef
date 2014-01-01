@@ -42,6 +42,16 @@ ssh_known_hosts "github.com" do
   hashed false
 end
 
+ssh_config "gitlab.com" do
+  options 'User' => 'git', 'IdentityFile' => '/home/captain/.ssh/deploy_key'
+  user "captain"
+end
+
+ssh_known_hosts "gitlab.com" do
+  user "captain"
+  hashed false
+end
+
 # Add to admin group for passwordless sudo
 group "sudo" do
   action :modify
