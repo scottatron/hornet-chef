@@ -14,12 +14,17 @@ Vagrant.configure("2") do |config|
         server_root_password:   'root',
         server_debian_password: 'root',
         server_repl_password:   'root'
+      },
+      nginx: {
+        default_site_enabled: false
       }
     }
     chef.run_list = [
       "recipe[hornet::default]",
+      "recipe[hornet::captain]",
       "recipe[hornet::ruby]",
-      "recipe[hornet::mysql]"
+      "recipe[hornet::mysql]",
+      "recipe[hornet::nginx]"
     ]
   end
 end
