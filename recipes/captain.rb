@@ -52,9 +52,8 @@ ssh_known_hosts "gitlab.com" do
   hashed false
 end
 
-# Add to admin group for passwordless sudo
-group "sudo" do
-  action :modify
-  members "captain"
-  append true
+# Passwordless sudo
+sudo 'captain' do
+  nopasswd true
+  user 'captain'
 end

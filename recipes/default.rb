@@ -12,3 +12,5 @@ include_recipe "git"
 
 package "libsqlite3-dev"
 package "imagemagick"
+
+include_recipe "sudo"
