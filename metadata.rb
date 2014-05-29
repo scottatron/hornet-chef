@@ -14,8 +14,9 @@ depends 'mysql', '~> 3.0'
 depends 'sudo' , '~> 2.3'
 depends 'ssh'  , '~> 0.6' # https://github.com/scottatron/chef-ssh
 
+# nginx
+depends 'nginx', '~> 2.2'
+
 # depends 'apt'  , '~> 2.3'
 # depends 'git'  , '~> 2.7'
-# depends 'nginx', '~> 2.2'
-
 # depends 'phantomjs', '~> 1.0'
