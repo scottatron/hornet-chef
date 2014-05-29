@@ -1,11 +1,15 @@
+include_recipe "sudo"
+
+ohai "reload_passwd" do
+  action :nothing
+  plugin "etc"
+end
+
 user "captain" do
   home    "/home/captain"
   shell   "/bin/bash"
   supports manage_home: true
-end
-
-ohai "reload_passwd" do # https://github.com/markolson/chef-ssh#usage
-  plugin "passwd"
+  notifies :reload, "ohai[reload_passwd]", :immediately
 end
 
 directory "/home/captain/.ssh" do
