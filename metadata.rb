@@ -6,9 +6,10 @@ description      'Installs/Configures hornet'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-# default, ruby, mysql
+# default, ruby, mysql, redis
 depends 'rbenv', '~> 1.7'
 depends 'mysql', '~> 3.0'
+depends 'redis'
 
 # captain
 depends 'sudo' , '~> 2.3'
