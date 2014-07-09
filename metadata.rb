@@ -11,7 +11,7 @@ depends 'apt', '>= 2.4'
 # default, ruby, mysql, redis
 depends 'rbenv'
 depends 'mysql'
-depends 'redis'
+depends 'redisio'
 
 # captain
 depends 'sudo'
