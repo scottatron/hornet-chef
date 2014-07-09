@@ -8,3 +8,6 @@ end
 rbenv_gem "bundler" do
   ruby_version node.hornet.ruby.version
 end
+
+rbenv_execute "gem update --system"
+rbenv_execute "gem pristine --all"
