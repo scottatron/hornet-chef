@@ -6,21 +6,22 @@ description      'Installs/Configures hornet'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
+depends 'apt', '>= 2.4'
+
 # default, ruby, mysql, redis
-depends 'rbenv', '~> 1.7'
-depends 'mysql', '~> 3.0'
+depends 'rbenv'
+depends 'mysql'
 depends 'redis'
 
 # captain
-depends 'sudo' , '~> 2.3'
-depends 'ssh'  , '~> 0.6' # https://github.com/scottatron/chef-ssh
+depends 'sudo'
+depends 'ssh' # https://github.com/scottatron/chef-ssh
 
 # nginx
-depends 'nginx', '~> 2.2'
+depends 'nginx'
 
 # ci-runner
 depends 'gitlab-ci'
 depends 'phantomjs'
 
-# depends 'apt'  , '~> 2.3'
 # depends 'git'  , '~> 2.7'
