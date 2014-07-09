@@ -18,6 +18,9 @@ depends 'ssh'  , '~> 0.6' # https://github.com/scottatron/chef-ssh
 # nginx
 depends 'nginx', '~> 2.2'
 
+# ci-runner
+depends 'gitlab-ci'
+depends 'phantomjs'
+
 # depends 'apt'  , '~> 2.3'
 # depends 'git'  , '~> 2.7'
-# depends 'phantomjs', '~> 1.0'
