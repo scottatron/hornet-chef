@@ -56,6 +56,16 @@ ssh_known_hosts "gitlab.com" do
   hashed false
 end
 
+ssh_config "git.decent.io" do
+  options 'User' => 'git', 'IdentityFile' => '/home/captain/.ssh/deploy_key'
+  user "captain"
+end
+
+ssh_known_hosts "git.decent.io" do
+  user "captain"
+  hashed false
+end
+
 # Passwordless sudo
 sudo 'captain' do
   nopasswd true
